@@ -10,10 +10,9 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   preview: {
-    allowedHosts: [
-      "powergym-blht.onrender.com",
-      "powergym-yyu4.onrender.com"
-    ],
+    host: true,
+    port: Number(process.env.PORT) || 4173,
+    allowedHosts: true,
   },
   plugins: [react()],
   resolve: {
